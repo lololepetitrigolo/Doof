@@ -21,6 +21,8 @@
 #column{
     display: flex;
     flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
@@ -97,6 +99,22 @@ p{
     display: none;
 }
 
+#illu{
+    margin: auto;
+    width: 300px;
+}
+
+@media screen and (max-width: 960px) {
+    p{
+        width: 200px;
+        font-size: 12px;
+    }
+    h1{
+        font-size: 24px;
+    }
+}
+
+
 @media screen and (max-width: 720px) and (orientation: portrait){
     #back{
         display: none;
@@ -121,7 +139,7 @@ p{
     #illu{
         margin: auto;
         width: 90vw;
-        max-width: 90vw;
+        max-width: 400px;
     }
     #column{
         width: 90vw;
