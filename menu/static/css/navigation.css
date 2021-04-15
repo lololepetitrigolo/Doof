@@ -85,6 +85,24 @@ body{
     display: none;
 }
 
+#foot{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(25, 33, 48);
+    width: 100vw;
+    height:80px;
+    color: white
+}
+#logo{
+    margin: auto;
+    margin-left: 20px;
+}
+#copy{
+    margin: auto;
+    margin-right: 20px;
+}
+
+
 @media screen and (max-width: 960px) {
     #lienActif{
         font-size: 12px;
