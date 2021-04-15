@@ -40,14 +40,14 @@
             <a id="lien" href="{% url 'tous' %}">Carte</a>
             <a id="lien" href="{% url 'recette' %}">Recette</a>
         </div>
-        <form id="searchForm" action="{% url 'recherche' %}" method="POST">
+        <form id="searchForm" autocomplete="off" action="{% url 'recherche' %}" method="POST">
             <div id="divSearch">
             {% csrf_token %}
                 <input placeholder="Rechercher" name="r" id="search" type="text">
             </div>
         </form>
         <div id="mob">
-            <form id="formMob" action="{% url 'recherche' %}" method="POST">
+            <form id="formMob" autocomplete="off" action="{% url 'recherche' %}" method="POST">
                 {% csrf_token %}
                 <input placeholder="Rechercher" name="r" id="searchMob" type="text">
             </form>

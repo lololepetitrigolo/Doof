@@ -5,15 +5,15 @@ from django.shortcuts import render
 from django.urls import reverse
 from random import randint
 
-from .models import menu,recette
+from .models import menu, recette
 # Create your views here.
 
 
 def index(request):
-    x = randint(1,len(menu.objects.all())-1)
+    x = randint(1, len(menu.objects.all())-1)
     print(x)
-    return render(request, "menu/index.html",{
-        'n':x,
+    return render(request, "menu/index.html", {
+        'n': x,
     })
 
 
@@ -53,7 +53,8 @@ def spec(request, n):
     except:
         return HttpResponseRedirect(reverse("tous"))
 
-def specrece(request,n):
+
+def specrece(request, n):
     try:
         menus_sucree = recette.objects.all().filter(sucrée=True)
         menus_salee = recette.objects.all().filter(sucrée=False)
@@ -62,28 +63,36 @@ def specrece(request,n):
             "nom": r.nom,
             "rec": r.rec,
             "liste_menus_sucree": menus_sucree,
-        "liste_menus_salee": menus_salee,
+            "liste_menus_salee": menus_salee,
         })
     except:
         return HttpResponseRedirect(reverse("recette"))
+
 
 def recherche(request):
     if request.method == 'POST':
         res = []
         r = request.POST['r']
+        if r.replace(' ','') == '':
+            return render(request, "menu/resultat.html", {
+                "resultat": []
+            })
         men = menu.objects.all()
         print(men)
         for m in men:
             print(m)
-            if trouver(m.aliment1,r) or trouver(m.aliment2,r) or trouver(m.commentaire,r):
+            if trouver(m.aliment1, r) or (trouver(m.aliment2, r) and m.aliment2 != 'None') or (trouver(m.commentaire, r) and m.commentaire != 'None'):
                 res.append(m)
         return render(request, "menu/resultat.html", {
             "resultat": res
         })
     return HttpResponseRedirect(reverse("index"))
 
-def trouver(t,m):
-    for i in range(0,len(t)):
+
+def trouver(t, m):
+    t = t.lower()
+    m = m.lower()
+    for i in range(0, len(t)):
         if t[i:i+len(m)] == m:
             return True
     return False
