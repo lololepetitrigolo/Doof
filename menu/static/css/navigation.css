@@ -10,8 +10,8 @@ body{
     font-family: 'Comfortaa';
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #70D65C 0%, #40BF6A 40.63%, #0A5C26 100%);
-    background-attachment: fixed;
+    background: linear-gradient(180deg, #29A352 0%, #33CC66 51.74%, #52E099 96.52%);
+    background-attachment: scroll;
     margin: 0;
 }
 
