@@ -11,4 +11,5 @@ urlpatterns = [
     path("carte/<int:n>/", views.spec, name="spec"),
     path("recette/", views.recep, name="recette"),
     path("recette/<int:n>/", views.specrece, name="rece"),
+    path("recherche/", views.recherche, name="recherche"),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

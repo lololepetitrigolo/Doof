@@ -1,0 +1,29 @@
+{% extends "menu/layout.html" %}
+{% load static %}
+
+{% block body %}
+<script>
+  function Show(el) {
+    const list = document.querySelector(el);
+    console.log(list.style.display)
+    if (list.style.display != "none") {
+      list.style.display = "none";
+    } else {
+      list.style.display = "flex";
+    }
+  }
+</script>
+
+<div id="cat">
+  <div onclick="Show('#midiUL')" id="titre">Résultat de la recherche</div>
+  <div id="midiUL" class="list">
+      {% for m in resultat %}
+      <a id="el" href={% url 'spec' m.id %}>{{m.aliment1}} {% if m.aliment2 != 'None' %}{{m.aliment2}}{% endif %}</a>
+      {% endfor %}
+      {% if resultat == [] %}
+      <a id="el">Aucun résultat</a>
+      {% endif %}
+  </div>
+</div>
+
+{% endblock body %}

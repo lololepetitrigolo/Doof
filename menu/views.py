@@ -66,3 +66,24 @@ def specrece(request,n):
         })
     except:
         return HttpResponseRedirect(reverse("recette"))
+
+def recherche(request):
+    if request.method == 'POST':
+        res = []
+        r = request.POST['r']
+        men = menu.objects.all()
+        print(men)
+        for m in men:
+            print(m)
+            if trouver(m.aliment1,r) or trouver(m.aliment2,r) or trouver(m.commentaire,r):
+                res.append(m)
+        return render(request, "menu/resultat.html", {
+            "resultat": res
+        })
+    return HttpResponseRedirect(reverse("index"))
+
+def trouver(t,m):
+    for i in range(0,len(t)):
+        if t[i:i+len(m)] == m:
+            return True
+    return False

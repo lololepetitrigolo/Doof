@@ -40,10 +40,18 @@
             <a id="lien" href="{% url 'tous' %}">Carte</a>
             <a id="lien" href="{% url 'recette' %}">Recette</a>
         </div>
-        <input placeholder="Rechercher" id="search" type="text">
-
+        <form id="searchForm" action="{% url 'recherche' %}" method="POST">
+            <div id="divSearch">
+            {% csrf_token %}
+                <input placeholder="Rechercher" name="r" id="search" type="text">
+            </div>
+        </form>
         <div id="mob">
-            <input placeholder="Rechercher" id="searchMob" type="text">
+            <form id="formMob" action="{% url 'recherche' %}" method="POST">
+                {% csrf_token %}
+                <input placeholder="Rechercher" name="r" id="searchMob" type="text">
+            </form>
+            
             <div id="linkMob">
                 <a id="lienActifMob" href="{% url 'index' %}">Accueil</a>
                 <a id="lienMob" href="{% url 'tous' %}">Carte</a>
