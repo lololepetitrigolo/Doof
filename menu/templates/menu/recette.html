@@ -1,0 +1,17 @@
+{% extends "menu/layout.html" %}
+{% load static %}
+
+{% block body %}
+<link href="{% static 'css/box.css' %}" rel="stylesheet">
+<article>
+  <div class="a">
+    <div id="divA">
+      <h1 id="t1">Sucrée</h1>
+    </div>
+    <div id="divB">
+      <h1 id="t1">Salée</h1>
+    </div>
+</article>
+<script src="{% static 'js/alea.js' %}"></script>
+<script src="{% static 'js/recette.js' %}"></script>
+{% endblock body %}

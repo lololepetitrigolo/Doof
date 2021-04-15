@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>DOOF</title>
+</head>
+<script>
+    function Able(div) {
+        mob = document.querySelector(div);
+        if (mob.style.display != 'flex') {
+            mob.style.display = 'flex';
+        } else {
+            mob.style.display = 'None';
+        }
+    }
+</script>
+
+<body>
+    <div id="nav">
+        <svg onclick="Able('#mob')" id="hamburger" width="35" height="25" viewBox="0 0 35 25" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H33.3125V3.9375H1V1Z" fill="black" />
+            <path d="M1 10.7917H33.3125V13.7292H1V10.7917Z" fill="black" />
+            <path d="M1 20.5833H33.3125V23.5208H1V20.5833Z" fill="black" />
+        </svg>
+        <span id="doof">DOOF</span>
+        <div id="link">
+            <a id="lienActif" href="">Accueil</a>
+            <a id="lien" href="">Carte</a>
+            <a id="lien" href="">Recette</a>
+        </div>
+        <input placeholder="Rechercher" id="search" type="text">
+
+        <div id="mob">
+            <input placeholder="Rechercher" id="searchMob" type="text">
+            <div id="linkMob">
+                <a id="lienActifMob" href="">Accueil</a>
+                <a id="lienMob" href="">Carte</a>
+                <a id="lienMob" href="">Recette</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+        {% block body %}{% endblock body %}
+    </div>
+    </div>
+</body>
+
+</html>

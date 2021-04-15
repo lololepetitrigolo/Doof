@@ -1,0 +1,77 @@
+{% extends "menu/layout.html" %}
+{% load static %}
+
+{% block body %}
+<img id="back" src="{% static 'img/Separation.png' %}" alt="Fond">
+<div id="content">
+  <img id="illu" src="{% static 'img/Street Life Standing.png' %}" alt="image d'illustration">
+  <div id="column">
+    <h1>Trouver des idées de repas</h1>
+    <p>Grâce à notre site vous pourrez trouver le repas qui vous feras plaisir</p>
+  </div>
+</div>
+<a href="#qualite" id="arrow">
+  <svg id="downArrow" width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L12 12L23 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</a>
+<div id="qualite">
+  <div id="frame">
+    <span id="qual">Diversité</span>
+    <p id="desc">Sur notre site vous trouverez une liste complète de menu pour tous vos repas.</p>
+  </div>
+  <div id="frame">
+    <span id="qual">Facilité</span>
+    <p id="desc">Vous pourrez classer les menus en fonction de différents critères grâce à nos outils.</p>
+  </div>
+  <div id="frame">
+    <span id="qual">Originalité</span>
+    <p id="desc">Pour changer de vos menus habituelle choissisez ces sur notre site </p>
+  </div>
+</div>
+<div id="content" style="color:white; margin-bottom: 70vh;">
+  <img id="illu" src="{% static 'img/Street Life Standing.png' %}" alt="image d'illustration">
+  <div id="column">
+    <h1>Aucune préférence</h1>
+    <p>Si vous ne chercher pas de repas particulier vous pouvez générer des menus aléatoirement</p>
+    <button id="btn">
+      <span id="btnTxt">Générer</span>
+      <svg id="btnArrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 6.9125C0 6.65065 0.0889509 6.39952 0.247284 6.21436C0.405618 6.0292 0.620364 5.92518 0.844281 5.92518H10.6261L7.00078 1.68759C6.84224 1.5022 6.75318 1.25075 6.75318 0.98857C6.75318 0.726385 6.84224 0.474938 7.00078 0.289545C7.15931 0.104153 7.37433 0 7.59853 0C7.82273 0 8.03775 0.104153 8.19628 0.289545L13.262 6.21348C13.3406 6.30519 13.403 6.41414 13.4455 6.53409C13.4881 6.65404 13.51 6.78264 13.51 6.9125C13.51 7.04237 13.4881 7.17096 13.4455 7.29091C13.403 7.41086 13.3406 7.51981 13.262 7.61153L8.19628 13.5355C8.03775 13.7209 7.82273 13.825 7.59853 13.825C7.37433 13.825 7.15931 13.7209 7.00078 13.5355C6.84224 13.3501 6.75318 13.0986 6.75318 12.8364C6.75318 12.5743 6.84224 12.3228 7.00078 12.1374L10.6261 7.89982H0.844281C0.620364 7.89982 0.405618 7.7958 0.247284 7.61065C0.0889509 7.42549 0 7.17436 0 6.9125Z"
+          fill="black" />
+      </svg>
+    </button>
+  </div>
+</div>
+<div id="content" style="color:white; margin-bottom: 70vh;">
+  <img id="illu" src="{% static 'img/Street Life Standing.png' %}" alt="image d'illustration">
+  <div id="column">
+    <h1>Comparer les repas</h1>
+    <p>Comparer les repas grâce aux tableau récapitulatif</p>
+    <button id="btn">
+      <span id="btnTxt">Comparer</span>
+      <svg id="btnArrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 6.9125C0 6.65065 0.0889509 6.39952 0.247284 6.21436C0.405618 6.0292 0.620364 5.92518 0.844281 5.92518H10.6261L7.00078 1.68759C6.84224 1.5022 6.75318 1.25075 6.75318 0.98857C6.75318 0.726385 6.84224 0.474938 7.00078 0.289545C7.15931 0.104153 7.37433 0 7.59853 0C7.82273 0 8.03775 0.104153 8.19628 0.289545L13.262 6.21348C13.3406 6.30519 13.403 6.41414 13.4455 6.53409C13.4881 6.65404 13.51 6.78264 13.51 6.9125C13.51 7.04237 13.4881 7.17096 13.4455 7.29091C13.403 7.41086 13.3406 7.51981 13.262 7.61153L8.19628 13.5355C8.03775 13.7209 7.82273 13.825 7.59853 13.825C7.37433 13.825 7.15931 13.7209 7.00078 13.5355C6.84224 13.3501 6.75318 13.0986 6.75318 12.8364C6.75318 12.5743 6.84224 12.3228 7.00078 12.1374L10.6261 7.89982H0.844281C0.620364 7.89982 0.405618 7.7958 0.247284 7.61065C0.0889509 7.42549 0 7.17436 0 6.9125Z"
+          fill="black" />
+      </svg>
+    </button>
+  </div>
+</div>
+<div id="content" style="color:white; margin-bottom: 70vh;">
+  <img id="illu" src="{% static 'img/Street Life Standing.png' %}" alt="image d'illustration">
+  <div id="column">
+    <h1>Trouver des idées de repas</h1>
+    <p>Grâce à notre site vous pourrez trouver le repas qui vous feras plaisir</p>
+    <button id="btn">
+      <span id="btnTxt">Accéder</span>
+      <svg id="btnArrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 6.9125C0 6.65065 0.0889509 6.39952 0.247284 6.21436C0.405618 6.0292 0.620364 5.92518 0.844281 5.92518H10.6261L7.00078 1.68759C6.84224 1.5022 6.75318 1.25075 6.75318 0.98857C6.75318 0.726385 6.84224 0.474938 7.00078 0.289545C7.15931 0.104153 7.37433 0 7.59853 0C7.82273 0 8.03775 0.104153 8.19628 0.289545L13.262 6.21348C13.3406 6.30519 13.403 6.41414 13.4455 6.53409C13.4881 6.65404 13.51 6.78264 13.51 6.9125C13.51 7.04237 13.4881 7.17096 13.4455 7.29091C13.403 7.41086 13.3406 7.51981 13.262 7.61153L8.19628 13.5355C8.03775 13.7209 7.82273 13.825 7.59853 13.825C7.37433 13.825 7.15931 13.7209 7.00078 13.5355C6.84224 13.3501 6.75318 13.0986 6.75318 12.8364C6.75318 12.5743 6.84224 12.3228 7.00078 12.1374L10.6261 7.89982H0.844281C0.620364 7.89982 0.405618 7.7958 0.247284 7.61065C0.0889509 7.42549 0 7.17436 0 6.9125Z"
+          fill="black" />
+      </svg>
+    </button>
+  </div>
+  <script type="text/javascript" src="{% static 'js/alea.js' %}"></script>
+  {% endblock body %}
