@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tous.css' %}">
     <title>DOOF</title>
 </head>
+
 <script>
     function Able(div) {
         const b = document.querySelector('body');
@@ -36,16 +38,16 @@
         <div id="link">
             <a id="lienActif" href="{% url 'index' %}">Accueil</a>
             <a id="lien" href="{% url 'tous' %}">Carte</a>
-            <a id="lien" href="">Recette</a>
+            <a id="lien" href="{% url 'recette' %}">Recette</a>
         </div>
         <input placeholder="Rechercher" id="search" type="text">
 
         <div id="mob">
             <input placeholder="Rechercher" id="searchMob" type="text">
             <div id="linkMob">
-                <a id="lienActifMob" href="">Accueil</a>
-                <a id="lienMob" href="">Carte</a>
-                <a id="lienMob" href="">Recette</a>
+                <a id="lienActifMob" href="{% url 'index' %}">Accueil</a>
+                <a id="lienMob" href="{% url 'tous' %}">Carte</a>
+                <a id="lienMob" href="{% url 'recette' %}">Recette</a>
             </div>
         </div>
     </div>

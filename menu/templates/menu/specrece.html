@@ -1,0 +1,44 @@
+
+
+
+{% extends "menu/layout.html" %}
+{% load static %}
+
+{% block body %}
+<script>
+  function Show(el) {
+    const list = document.querySelector(el);
+    console.log(list.style.display)
+    if (list.style.display != "none") {
+      list.style.display = "none";
+    } else {
+      list.style.display = "flex";
+    }
+  }
+</script>
+
+<img id="back" src="{% static 'img/Separation.png' %}" alt="Fond">
+<img id="backMob" src="{% static 'img/SeparationMob.png' %}" alt="Fond">
+
+<div id="spec">
+  <p id="al">{{nom}}</p>
+  <textarea>{{rec}}</textarea>
+</div>
+
+<div id="cat">
+  <div onclick="Show('#midiUL')" id="titre">Recette sucré</div>
+  <div id="midiUL" class="list">
+    {% for m in liste_menus_sucree %}
+    <a id="el" href={% url 'rece' m.id %}>{{m.nom}}</a>
+    {% endfor %}
+  </div>
+</div>
+<div id="cat">
+  <div onclick="Show('#soirUL')" id="titre">Recette salé</div>
+  <div id="soirUL" class="list">
+    {% for m in liste_menus_salee %}
+    <a id="el" href={% url 'rece' m.id %}>{{m.nom}}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock body %}

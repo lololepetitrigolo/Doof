@@ -2,15 +2,32 @@
 {% load static %}
 
 {% block body %}
-<link href="{% static 'css/box.css' %}" rel="stylesheet">
-<article>
-  <div class="a">
-    <div id="divA">
-      <h1 id="t1">Midi</h1>
-    </div>
-    <div id="divB">
-      <h1 id="t1">Soir</h1>
-    </div>
-</article>
-<script src="{% static 'js/alea2.js' %}"></script>
+<script>
+  function Show(el) {
+    const list = document.querySelector(el);
+    console.log(list.style.display)
+    if (list.style.display != "none") {
+      list.style.display = "none";
+    } else {
+      list.style.display = "flex";
+    }
+  }
+</script>
+
+<div id="cat">
+  <div onclick="Show('#midiUL')" id="titre">Menu pour le midi</div>
+  <div id="midiUL" class="list">
+      {% for m in liste_menu_midi %}
+      <a id="el" href={% url 'spec' m.id %}>{{m.aliment1}} {% if m.aliment2 != 'None' %}{{m.aliment2}}{% endif %}</a>
+      {% endfor %}
+  </div>
+</div>
+<div id="cat">
+  <div onclick="Show('#soirUL')" id="titre">Menu pour le soir</div>
+  <div id="soirUL" class="list">
+      {% for m in liste_menu_soir %}
+      <a id="el" href={% url 'spec' m.id %}>{{m.aliment1}} {% if m.aliment2 != 'None' %}{{m.aliment2}}{% endif %}</a>
+      {% endfor %}
+  </div>
+</div>
 {% endblock body %}

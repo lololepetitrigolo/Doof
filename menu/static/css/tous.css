@@ -1,0 +1,80 @@
+#cat{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 70vw;
+    margin-bottom: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+#titre{
+    width: 70vw;
+    border-bottom: solid white;
+}
+#midiUL{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 66vw;
+    padding: 5px;
+    margin-left: 4vw;
+    margin-right: auto;
+}
+
+#soirUL{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 26vw;
+    padding: 5px;
+    margin-left: 4vw;
+    margin-right: auto;
+}
+
+
+#el{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#glob{
+    margin: 30px;
+}
+
+#spec{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70vh;
+    text-align: center;
+}
+#al{
+    width: 90vw;
+    font-size: 24px;
+    margin: auto;
+}
+#nt{
+    margin: auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#com{
+    margin: auto;
+}
+
+@media screen and (max-width: 720px) and (orientation: portrait){
+    #spec{
+        margin-top: 20vh;
+    }
+    #el{
+        font-size: 20px;
+    }
+    #titre{
+        font-size: 24px;
+    }
+}

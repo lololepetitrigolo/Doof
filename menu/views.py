@@ -10,21 +10,10 @@ from .models import menu,recette
 
 
 def index(request):
-    if request.method == 'POST':
-        menus = menu.objects.all()
-        num = randint(0, len(menus)-1)
-        m = menus[num]
-        print(m)
-        return render(request, "menu/index.html", {
-            "method": 'POST',
-            "al1": m.aliment1,
-            "al2": m.aliment2,
-            "nutr1": m.nutriscore1,
-            "nutr2": m.nutriscore2,
-            "com": m.commentaire,
-        })
-    return render(request, "menu/index.html", {
-        "method": 'GET'
+    x = randint(1,len(menu.objects.all())-1)
+    print(x)
+    return render(request, "menu/index.html",{
+        'n':x,
     })
 
 
