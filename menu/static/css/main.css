@@ -120,8 +120,8 @@ p{
     }
     #illu{
         margin: auto;
-        width: 40vw;
-        max-width: 200px;
+        width: 90vw;
+        max-width: 90vw;
     }
     #column{
         width: 90vw;
