@@ -155,6 +155,9 @@ body{
         margin-right: 20px;
         font-size: 32px;
     }
+    #searchForm{
+        display: none;
+    }
     #linkMob{
         display: flex;
         flex-direction: column;
