@@ -12,11 +12,14 @@
 </head>
 <script>
     function Able(div) {
-        mob = document.querySelector(div);
+        const b = document.querySelector('body');
+        const mob = document.querySelector(div);
         if (mob.style.display != 'flex') {
             mob.style.display = 'flex';
+            b.style.overflowY = 'hidden';
         } else {
             mob.style.display = 'None';
+            b.style.overflowY = 'auto';
         }
     }
 </script>
