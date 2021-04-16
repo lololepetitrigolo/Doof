@@ -28,11 +28,14 @@
 
 h1{
     font-size: 32px;
+    margin-bottom: 5px;
 }
 
 p{
     width: 300px;
     font-size: 16px;
+    margin-top: 0;
+    margin-left: 2px;
 }
 
 #arrow{
@@ -49,6 +52,7 @@ p{
     margin: auto;
     padding-top: 20vh;
     margin-bottom: 70vh;
+    color: #1C2833;
 }
 
 #frame{
@@ -68,11 +72,13 @@ p{
     margin-bottom: 0;
     margin-top: 0;
     font-size: 32px;
+    color: #1C2833;
 }
 
 #desc{
     margin: auto;
     width: 180px;
+    color: #273746;
 }
 
 #btn{
@@ -93,7 +99,8 @@ p{
 }
 #btnTxt{
     margin: auto;
-    color: black;
+    color: #1C2833;
+    font-weight: bold;
     text-decoration: none;
 }
 

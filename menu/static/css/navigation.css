@@ -35,6 +35,8 @@ body{
     font-size: 24px;
     margin: auto;
     margin-left: 10px;
+    color: #1C2833;
+    text-decoration: none;
 }
 
 #link{
@@ -61,9 +63,10 @@ body{
     background-color: white;
     width: 150px;
     border-radius: 20px;
-    border:solid 2px black;
+    border:solid 1px #1C2833;
     height: 30px;
     padding-left: 5px;
+    color: #2C3E50;
 }
 
 #divSearch{
@@ -91,7 +94,8 @@ body{
     background-color: rgb(25, 33, 48);
     width: 100vw;
     height:80px;
-    color: white
+    color: white;
+    margin-top: auto;
 }
 #logo{
     margin: auto;
@@ -166,17 +170,18 @@ body{
     }
     #lienActifMob{
         text-decoration: none;
-        color: black;
+        color: #17202A;
         font-size: 24px;
         font-weight: bold;
         margin: auto;
-        margin-top:20px;
+        margin-top:40px;
     }
     #lienMob{
         text-decoration: none;
-        color: black;
+        color: #212F3D;
         font-size: 24px;
         margin: auto;
+        margin-top:30px;
     }
     #mob{
         display: none;
@@ -191,6 +196,7 @@ body{
 
     #searchMob{
         width: 100vw;
+        color: #2C3E50;
     }
 
     #searchForm{

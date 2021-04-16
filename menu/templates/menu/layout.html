@@ -30,11 +30,11 @@
     <div id="nav">
         <svg onclick="Able('#mob')" id="hamburger" width="35" height="25" viewBox="0 0 35 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1H33.3125V3.9375H1V1Z" fill="black" />
-            <path d="M1 10.7917H33.3125V13.7292H1V10.7917Z" fill="black" />
-            <path d="M1 20.5833H33.3125V23.5208H1V20.5833Z" fill="black" />
+            <path d="M1 1H33.3125V3.9375H1V1Z" fill="#1C2833" />
+            <path d="M1 10.7917H33.3125V13.7292H1V10.7917Z" fill="#1C2833" />
+            <path d="M1 20.5833H33.3125V23.5208H1V20.5833Z" fill="#1C2833" />
         </svg>
-        <span id="doof">DOOF</span>
+        <a href="{% url 'index' %}" id="doof">DOOF</a>
         <div id="link">
             <a id="lienActif" href="{% url 'index' %}">Accueil</a>
             <a id="lien" href="{% url 'tous' %}">Carte</a>

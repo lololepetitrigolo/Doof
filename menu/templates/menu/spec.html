@@ -19,10 +19,10 @@
 
 <div id="spec">
     <p id="al">{{al1}}</p>
-    <p id="nt"><span style="color: rgb(59, 68, 80);">{% if nutr1 != -1 %}{{nutr1}}</span>/100{% endif %}</p>
+    <p id="nt"><span>{% if nutr1 != -1 %}{{nutr1}}</span>/100{% endif %}</p>
     <p id="al">{% if al2 != 'None' %}{{al2}}{% endif %}</p>
-    <p id="nt"><span style="color: rgb(59, 68, 80);">{% if nutr2 != -1 %}{{nutr2}}</span>/100{% endif %}</p>
-    <p id="com">{% if com != 'None' %}{{com}}{% else %}<span style="color: rgb(110, 110, 110);">Aucune remarque pour ce repas</span> {% endif %}</p>
+    <p id="nt"><span >{% if nutr2 != -1 %}{{nutr2}}</span>/100{% endif %}</p>
+    <p id="com">{% if com != 'None' %}{{com}}{% else %}<span id="rien">Aucune remarque pour ce repas</span> {% endif %}</p>
 </div>
 
 <div id="cat">
