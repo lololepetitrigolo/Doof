@@ -101,6 +101,11 @@ body{
     margin: auto;
     margin-left: 20px;
 }
+
+#logoImg{
+    height: 40px;
+}
+
 #copy{
     margin: auto;
     margin-right: 20px;
