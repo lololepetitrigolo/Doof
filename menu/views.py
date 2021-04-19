@@ -11,11 +11,28 @@ from .models import menu, recette
 
 def index(request):
     x = randint(1, len(menu.objects.all())-1)
-    print(x)
     return render(request, "menu/index.html", {
         'n': x,
     })
 
+def specAlea(request,n):
+    try:
+        menus_midi = menu.objects.all().filter(midi=True)
+        menus_soir = menu.objects.all().filter(midi=False)
+        m = menu.objects.filter(id=n)[0]
+        x = randint(1, len(menu.objects.all())-1)
+        return render(request, "menu/specAlea.html", {
+            "al1": m.aliment1,
+            "al2": m.aliment2,
+            "nutr1": m.nutriscore1,
+            "nutr2": m.nutriscore2,
+            "com": m.commentaire,
+            "liste_menu_midi": menus_midi,
+            "liste_menu_soir": menus_soir,
+            'n': x,
+        })
+    except:
+        return HttpResponseRedirect(reverse("tous"))
 
 def tous(request):
     menus_midi = menu.objects.all().filter(midi=True)
@@ -40,7 +57,6 @@ def spec(request, n):
         menus_midi = menu.objects.all().filter(midi=True)
         menus_soir = menu.objects.all().filter(midi=False)
         m = menu.objects.filter(id=n)[0]
-        print(m)
         return render(request, "menu/spec.html", {
             "al1": m.aliment1,
             "al2": m.aliment2,
@@ -78,9 +94,7 @@ def recherche(request):
                 "resultat": []
             })
         men = menu.objects.all()
-        print(men)
         for m in men:
-            print(m)
             if trouver(m.aliment1, r) or (trouver(m.aliment2, r) and m.aliment2 != 'None') or (trouver(m.commentaire, r) and m.commentaire != 'None'):
                 res.append(m)
         return render(request, "menu/resultat.html", {
